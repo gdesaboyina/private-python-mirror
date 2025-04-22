@@ -1,16 +1,20 @@
-# build the docker image
-docker-compose build
+## Devpi Constrained PyPI Mirror
 
-# run the docker image
-docker-compose up -d
+A self-hosted Devpi PyPI mirror fronted by Nginx with strict package access control and constrained download policies. This setup is ideal for air-gapped or tightly controlled environments where only pre-approved Python packages (and their dependencies) should be accessible.
 
-# check the running docker containers
-docker-compose ps -a
 
-# send PR to file approved-packages.txt
+### build the docker image
+`docker-compose build`
 
-# Scan for the Python package vulnerabilities. Make sure to build the image before running scan
+### run the docker image
+`docker-compose up -d`
 
-```bash
-./scan_pip_packages.sh
-```
+### check the running docker containers
+`docker-compose ps -a`
+
+### send PR to file approved-packages.txt
+
+### Scan for the Python package vulnerabilities. Make sure to build the image before running scan
+
+`./scan_pip_packages.sh`
+
