@@ -1,0 +1,8 @@
+requests
+azure-core
+oci-cli
+oci
+ansible
+certifi
+pip-audit
+setuptools
