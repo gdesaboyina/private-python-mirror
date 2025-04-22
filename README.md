@@ -19,4 +19,4 @@ A self-hosted Devpi PyPI mirror fronted by Nginx with strict package access cont
 `./scan_pip_packages.sh`
 
 ### Install in Client from Private Repo.
-`pip install -i http://<nginx-server-ip>:8080/private --trusted-host <nginx-server-ip> azure-core`
+`pip install -i http://<nginx-server-ip>:8080/myuser/mirror --trusted-host <nginx-server-ip> azure-core`
