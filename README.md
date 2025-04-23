@@ -1,19 +1,28 @@
-#### build the docker image
+1. build the docker image
+```bash
 docker-compose build
+```
 
-#### run the docker image
+2. run the docker image
+```bash
 docker-compose up -d
+```
 
-#### check the running docker containers
+3. check the running docker containers
+```bash
 docker-compose ps -a
+```
 
-#### send PR to file approved-packages.txt
+4. Manage the approved packages in approved-packages.txt. Can be specified with version too.
 
-#### Scan for the Python package vulnerabilities. Make sure to build the image before running scan
+5. Scan for the Python package vulnerabilities. Make sure to build the image before running scan
 
-`./scan_pip_packages.sh`
+```bash
+./scan_pip_packages.sh
+```
 
-
-#### PIP Install from Client Side
-`pip install -i http://<nginx-server-ip>:8080/private/mirror --trusted-host <nginx-server-ip> azure-core`
+6. PIP Install from Client Side
+```bash
+pip install -i http://<nginx-server-ip>:8080/private/mirror --trusted-host <nginx-server-ip> azure-core
+```
 
