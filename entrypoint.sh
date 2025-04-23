@@ -22,13 +22,15 @@ done
 devpi use "$BASE_URL"
 devpi login root --password=''
 devpi user -m root password=admin
-devpi user -c myuser password=myuser123
+
+# create private user
+devpi user -c private password=private123
 
 # Login as root
 devpi login root --password=admin
 
 # Create isolated index to have constraints
-INDEX_NAME="myuser/mirror"
+INDEX_NAME="private/mirror"
 devpi index -c "$INDEX_NAME" type=constrained bases=root/pypi
 
 # update whitelist

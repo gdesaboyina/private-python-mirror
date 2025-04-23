@@ -26,8 +26,8 @@ RUN pip3 install --upgrade setuptools pip wheel devpi-server devpi-client devpi-
 WORKDIR /apps
 
 # Copy sync script and YAML config
-COPY *.sh *.txt *.py .
-RUN chmod ugo+rx *.sh *.py
+COPY *.sh *.txt .
+RUN chmod ugo+rx *.sh
 
 # Expose devpi port
 EXPOSE 3141
